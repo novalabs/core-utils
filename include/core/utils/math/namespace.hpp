@@ -6,7 +6,11 @@
 
 #pragma once
 
-#define NAMESPACE_CORE_UTILS_MATH Core::Utils::Math
+/*! \namespace core::utils::math
+ * \brief Core useful(?) math utilities
+ */
+
+#define NAMESPACE_CORE_UTILS_MATH core::utils::math
 #define NAMESPACE_CORE_UTILS_MATH_BEGIN \
    namespace core { \
    namespace utils { \
