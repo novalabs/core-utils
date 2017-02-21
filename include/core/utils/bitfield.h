@@ -1,4 +1,4 @@
-/* COPYRIGHT (c) 2016 Nova Labs SRL
+/* COPYRIGHT (c) 2016-2017 Nova Labs SRL
  *
  * All rights reserved. All use of this software and documentation is
  * subject to the License Agreement located in the file LICENSE.
@@ -219,6 +219,8 @@ struct BitFieldConstMember {
 // All members are public to simplify compliance with sections 9.0.7 and
 // 9.5.1 of the C++11 standard, thereby avoiding undefined behavior.
 //---------------------------------------------------------
+/*! \brief Bitfield definition macro
+ */
 #define BEGIN_BITFIELD_TYPE(typeName, T) \
     union typeName \
     { \
@@ -228,18 +230,24 @@ struct BitFieldConstMember {
         typeName& operator=(T v) { wrapper.value = v; return *this; } \
         operator T&() { return wrapper.value; } \
         operator T() const { return wrapper.value; } \
-        typedef T StorageType;
+        typedef T StorageType; //!< Storage type
 
+/*! \brief Bitfield member definition macro
+ */
 #define ADD_BITFIELD_MEMBER(memberName, offset, bits) \
         BitFieldMember<StorageType, offset, bits> memberName;
 
 // Added by Nova Labs
+/*! \brief Bitfield const member definition macro
+ */
 #define ADD_CONST_BITFIELD_MEMBER(memberName, offset, bits, value) \
 		BitFieldConstMember<StorageType, offset, bits, value>  memberName;
 
 #define ADD_BITFIELD_ARRAY(memberName, offset, bits, numItems) \
         BitFieldArray<StorageType, offset, bits, numItems> memberName;
 
+/*! \brief Bitfield member definition macro
+ */
 #define END_BITFIELD_TYPE() \
     };
 

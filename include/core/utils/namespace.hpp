@@ -1,4 +1,4 @@
-/* COPYRIGHT (c) 2016 Nova Labs SRL
+/* COPYRIGHT (c) 2016-2017 Nova Labs SRL
  *
  * All rights reserved. All use of this software and documentation is
  * subject to the License Agreement located in the file LICENSE.
@@ -12,8 +12,8 @@
 
 #define NAMESPACE_CORE_UTILS core::utils
 #define NAMESPACE_CORE_UTILS_BEGIN \
-   namespace core { \
-   namespace utils {
+    namespace core { \
+    namespace utils {
 #define NAMESPACE_CORE_UTILS_END \
-   } \
-   }
+    } \
+    }

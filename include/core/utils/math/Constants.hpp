@@ -1,4 +1,4 @@
-/* COPYRIGHT (c) 2016 Nova Labs SRL
+/* COPYRIGHT (c) 2016-2017 Nova Labs SRL
  *
  * All rights reserved. All use of this software and documentation is
  * subject to the License Agreement located in the file LICENSE.
@@ -14,28 +14,28 @@ namespace constants {
 template <class T>
 inline constexpr T
 pi(
-   T* = 0
+    T* = 0
 )
 {
-   return 3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798214808651e+00;
+    return 3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798214808651e+00;
 }
 
 template <>
 inline constexpr float
 pi<float>(
-   float*
+    float*
 )
 {
-   return 3.14159265358979f;
+    return 3.14159265358979f;
 }
 
 template <>
 inline constexpr double
 pi<double>(
-   double*
+    double*
 )
 {
-   return 3.141592653589793238463;
+    return 3.141592653589793238463;
 }
 }
 

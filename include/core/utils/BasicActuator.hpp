@@ -1,4 +1,4 @@
-/* COPYRIGHT (c) 2016 Nova Labs SRL
+/* COPYRIGHT (c) 2016-2017 Nova Labs SRL
  *
  * All rights reserved. All use of this software and documentation is
  * subject to the License Agreement located in the file LICENSE.
@@ -14,27 +14,27 @@ template <typename _T>
 class BasicActuator
 {
 public:
-   using DataType = _T;
+    using DataType = _T;
 
-   virtual bool
-   init() = 0;
+    virtual bool
+    init() = 0;
 
-   virtual bool
-   configure() = 0;
+    virtual bool
+    configure() = 0;
 
-   virtual bool
-   start() = 0;
+    virtual bool
+    start() = 0;
 
-   virtual bool
-   stop() = 0;
+    virtual bool
+    stop() = 0;
 
-   virtual bool
-   waitUntilReady() = 0;
+    virtual bool
+    waitUntilReady() = 0;
 
-   virtual bool
-   set(
-      const DataType& data
-   ) = 0;
+    virtual bool
+    set(
+        const DataType& data
+    ) = 0;
 };
 
 NAMESPACE_CORE_UTILS_END
