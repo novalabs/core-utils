@@ -35,6 +35,11 @@ public:
     set(
         const DataType& data
     ) = 0;
+
+    virtual bool
+    setI(
+        const DataType& data
+    ) = 0;
 };
 
 NAMESPACE_CORE_UTILS_END
