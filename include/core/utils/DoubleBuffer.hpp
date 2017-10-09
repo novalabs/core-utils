@@ -53,7 +53,7 @@ public:
         pointer from
     )
     {
-        memcpy(from, _write, bytes);
+        memcpy(_write, from, bytes);
     }
 
     inline void
@@ -86,6 +86,6 @@ private:
     T* _read;
     T* _write;
     core::os::Mutex _mutex;
-}; 
+};
 
 NAMESPACE_CORE_UTILS_END
