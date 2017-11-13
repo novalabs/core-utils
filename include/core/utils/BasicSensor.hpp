@@ -38,6 +38,9 @@ public:
     get(
         DataType& data
     ) = 0;
+
+    virtual void
+	reset() = 0;
 };
 
 NAMESPACE_CORE_UTILS_END
